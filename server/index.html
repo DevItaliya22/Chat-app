@@ -1,0 +1,42 @@
+
+<!-- this file is just a demo to see if out socket in backend side do actually works -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO Client</title>
+</head>
+<body>
+    <h1>Socket.IO Client</h1>
+    
+    
+
+    <div>
+        <input type="text" id="messageInput" placeholder="Enter message">
+        <button id="sendButton">Send</button>
+    </div>
+
+    <script src="https://cdn.socket.io/4.3.2/socket.io.min.js"></script>
+    
+    <script>
+        const socket = io("http://localhost:3000");
+
+        socket.on("connect", () => {
+            console.log("Connected to server");
+        });
+
+        socket.on("serverEvent", (data) => {
+            console.log("Received from server:", data);
+        });
+
+        document.querySelector("#sendButton").addEventListener("click", () => {
+            console.log("trying to send");
+            const message = document.querySelector("#messageInput").value;
+            socket.emit("clientEvent", message);
+        });
+    </script>
+</body>
+</html>
