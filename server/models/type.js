@@ -5,6 +5,20 @@ const userSignUpSchema = zod.object({
     password: zod.string().min(4).max(56),
     
 });
+const roomNameSchema = zod.object({
+    roomName : zod.string(),
+})
+const roomSocketIdSchema = zod.object({
+    roomSocketId : zod.string(),
+})
+const saveDataSchema = zod.object({
+    message:zod.array(),
+    roomId:zod.string()
+
+})
 export {
-    userSignUpSchema
+    userSignUpSchema,
+    roomNameSchema,
+    roomSocketIdSchema,
+    saveDataSchema
 };

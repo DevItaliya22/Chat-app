@@ -1,4 +1,3 @@
-
 *{
   margin: 0px;
   padding: 0px;
@@ -116,3 +115,114 @@
   background-color: #0056b3;
 }
 
+.left-bar{
+  display: block;
+  height: 100vh;
+  width: 5%;
+  background-color: black;
+
+}
+.left-bar .left-bar-inner{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.left-bar .left-bar-inner .hover-effect-button{
+  padding: 10px 5px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  color: #667781;
+  background-color: white;
+  border: none;
+}
+
+.left-bar .left-bar-inner .join-room{
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  width: 400px;
+  height: 150px;
+  background-color: #0b846d;
+}
+.text-join-room{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text-join-room h3{
+  margin: 20px auto;
+  color: whitesmoke;
+}
+.text-join-room button{
+  transition: .3s linear;
+  border-radius: 0px;
+}
+.text-join-room button:hover{
+  background-color: #0b141a;
+  color: white;
+  border-radius: 10px;
+}
+.left-bar .left-bar-inner .join-room input{
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+.left-bar .left-bar-inner .join-room button{
+  margin: 0 auto;
+  padding: 8px 20px;
+  width: 150px;
+  border:none;
+  margin-top: 20px;
+}
+.right-title{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.right-title .hover-effect-button{
+  margin: 10px 0;
+  box-sizing: border-box;
+  color: #667781;
+  background-color: white;
+  border: none;
+  transition: .3s linear;
+  margin-right: 20px;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+.right-title .hover-effect-button:hover{
+  background-color: #0b141a;
+  color: white;
+  border-radius: 10px;
+}
+.right-title .right-delete-box{
+  display: block;
+  height: 100px;
+  width: 500px;
+  position: absolute;
+  top: 100%;
+  left: 30%;
+  background-color: #667781;
+  margin: 0 auto;
+}
+.delete-sure-button{
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+}
+.delete-sure-button button{
+  padding: 5px 20px;
+  margin-left: 120px ;
+  margin-top:10px ;
+}
+.messages {
+  overflow-y: auto;
+  max-height: calc(100vh - 200px); 
+}
+.message{
+  font-size: 16px;
+  
+}

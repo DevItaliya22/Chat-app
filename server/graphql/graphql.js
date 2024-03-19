@@ -1,10 +1,9 @@
-
 const typeDefs = `
     type Room {
         roomName: String!
+        socketId: String!
         members: [User]
         messages: [Message]
-        socketId: String!
     }
     type User {
         email: String!
@@ -15,7 +14,6 @@ const typeDefs = `
     type Message {
         content: String!
         sender: String!
-        
     }
     type Query {
         hello: String

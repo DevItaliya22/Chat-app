@@ -14,9 +14,10 @@ const user = new Schema({
     type:mongoose.Schema.Types.ObjectId,
     ref:'Room'
    }],
-   socketId:{
+   customSocketId:{
     type:String
    }
+
 })
 
 const rooms = new Schema({
@@ -24,15 +25,15 @@ const rooms = new Schema({
         type:String
     },
     members:[{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'User'
+        type:String,
     }],
     messages:[{
         type:mongoose.Schema.Types.ObjectId,
         ref:'Message'
     }],
     socketId:{
-        type:String
+        type:String,
+        require:true
     }
 })
 

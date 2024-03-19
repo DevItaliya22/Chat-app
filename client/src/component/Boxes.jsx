@@ -1,6 +1,6 @@
-import React, { useState ,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
-function Boxes({ id, onClick, isSelected }) {
+function Boxes({ id, roomName, onClick, isSelected }) {
   const [backgroundColor, setBackgroundColor] = useState('#0b141a');
 
   const handleClick = () => {
@@ -21,7 +21,7 @@ function Boxes({ id, onClick, isSelected }) {
     >
       <div className="title">
         <h2 className="text">
-          hello
+          {roomName}
         </h2>
       </div>
     </div>
